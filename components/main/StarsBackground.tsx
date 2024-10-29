@@ -13,8 +13,8 @@ const StarBackground = (props: any) => {
   );
 
   useFrame((state, delta) => {
-    ref.current.rotation.x -= delta / 10;
-    ref.current.rotation.y -= delta / 15;
+    ref.current.rotation.x -= delta / 30;
+    ref.current.rotation.y -= delta / 40;
   });
 
   return (
@@ -22,7 +22,7 @@ const StarBackground = (props: any) => {
       <Points ref={ref} positions={sphere} stride={3} frustumCulled {...props}>
         <PointMaterial
           transparent
-          color="#fff"
+          color="#474747"
           size={0.002}
           sizeAttenuation={true}
           dethWrite={false}
